@@ -13,7 +13,7 @@ function theDriver() {
 	}
 	
 	function makeDiagram() {
-		document.getElementsByClassName("main-content")[0].innerHTML = "Aici vine diagrama"
+		document.getElementsByClassName("main-content")[0].innerHTML = "Aici vine diagrama";
 	}
 
 	//Calling the functions
