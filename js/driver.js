@@ -1,4 +1,7 @@
+body.addEventListener("load", theDriver);
+
 function theDriver() {
+	
 	function makeMenu() {
 		var button = document.createElement("button");
 		button.innerHTML = "Project Diagram";
