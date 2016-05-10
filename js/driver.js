@@ -3,8 +3,8 @@ function theDriver() {
 		var button = document.createElement("button");
 		button.innerHTML = "Project Diagram";
 
-		var menu = document.getElementsByClassName("menu");
-		menu.appendChild(button);
+		var mymenu = document.getElementsByClassName("menu");
+		mymenu.appendChild(button);
 
 		button.addEventListener ("click", function() {
 		  alert("did something");
