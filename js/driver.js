@@ -1,4 +1,4 @@
-document.body.addEventListener("load", theDriver);
+document.body.addEventListener("load", theDriver());
 
 function theDriver() {
 	
