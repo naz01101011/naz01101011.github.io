@@ -5,42 +5,39 @@ app.config(function($routeProvider) {
 	
 	.when('/', {
 		templateUrl : 'pages/home.html',
-		controller : 'HomeController'
+		controller : 'HomeController',
+		activeButton : 'home'
 	})
 	
 	.when('/blog', {
 		templateUrl : 'pages/blog.html',
-		controller : 'BlogController'
+		controller : 'BlogController',
+		activeButton : 'blog'
 	})
 	
 	.when('/about', {
 		templateUrl : 'pages/about.html',
-		controller : 'AboutController'
+		controller : 'AboutController',
+		activeButton : 'about'
 	})
 	
 	.otherwise({redirectTo: '/'});
 });
 
-app.controller('HomeController', function($scope) {
+app.controller('HomeController', function($scope, $route) {
+	$scope.$route = $route;
 	$scope.message = 'Hello from HomeController';
 	
-	$scope.getClass = function (path) {
-		return ($location.path().substr(0, path.length) === path) ? 'w3-lime' : '';
-	}
 });
 
-app.controller('BlogController', function($scope) {
+app.controller('BlogController', function($scope, $route) {
+	$scope.$route = $route;
 	$scope.message = 'Hello from BlogController';
-	
-	$scope.getClass = function (path) {
-		return ($location.path().substr(0, path.length) === path) ? 'w3-lime' : '';
-	}
+
 });
 
-app.controller('AboutController', function($scope) {
+app.controller('AboutController', function($scope, $route) {
+	$scope.$route = $route;
 	$scope.message = 'Hello from AboutController';
-	
-	$scope.getClass = function (path) {
-		return ($location.path().substr(0, path.length) === path) ? 'w3-lime' : '';
-	}
+
 });
