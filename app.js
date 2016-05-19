@@ -23,12 +23,24 @@ app.config(function($routeProvider) {
 
 app.controller('HomeController', function($scope) {
 	$scope.message = 'Hello from HomeController';
+	
+	$scope.getClass = function (path) {
+		return ($location.path().substr(0, path.length) === path) ? 'w3-lime' : '';
+	}
 });
 
 app.controller('BlogController', function($scope) {
 	$scope.message = 'Hello from BlogController';
+	
+	$scope.getClass = function (path) {
+		return ($location.path().substr(0, path.length) === path) ? 'w3-lime' : '';
+	}
 });
 
 app.controller('AboutController', function($scope) {
 	$scope.message = 'Hello from AboutController';
+	
+	$scope.getClass = function (path) {
+		return ($location.path().substr(0, path.length) === path) ? 'w3-lime' : '';
+	}
 });
