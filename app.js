@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngRoute']);
+var app = angular.module('IamRuvin', ['ngRoute']);
 
 app.config(function($routeProvider) {
 	$routeProvider
@@ -19,22 +19,4 @@ app.config(function($routeProvider) {
 	})
 	
 	.otherwise({redirectTo: '/'});
-});
-
-app.controller('HomeController', function($scope) {
-	$scope.message = 'Hello from HomeController';
-	$scope.pageName = 'Home';
-	
-});
-
-app.controller('BlogController', function($scope) {
-	$scope.message = 'Hello from BlogController';
-	$scope.pageName = 'Blog';
-
-});
-
-app.controller('AboutController', function($scope) {
-	$scope.message = 'Hello from AboutController';
-	$scope.pageName = 'About';
-
 });
