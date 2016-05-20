@@ -5,39 +5,33 @@ app.config(function($routeProvider) {
 	
 	.when('/', {
 		templateUrl : 'pages/home.html',
-		controller : 'HomeController',
-		activeButton : 'home'
+		controller : 'HomeController'
 	})
 	
 	.when('/blog', {
 		templateUrl : 'pages/blog.html',
-		controller : 'BlogController',
-		activeButton : 'blog'
+		controller : 'BlogController'
 	})
 	
 	.when('/about', {
 		templateUrl : 'pages/about.html',
-		controller : 'AboutController',
-		activeButton : 'about'
+		controller : 'AboutController'
 	})
 	
 	.otherwise({redirectTo: '/'});
 });
 
-app.controller('HomeController', function($scope, $route) {
-	$scope.$route = $route;
+app.controller('HomeController', function($scope) {
 	$scope.message = 'Hello from HomeController';
 	
 });
 
-app.controller('BlogController', function($scope, $route) {
-	$scope.$route = $route;
+app.controller('BlogController', function($scope) {
 	$scope.message = 'Hello from BlogController';
 
 });
 
-app.controller('AboutController', function($scope, $route) {
-	$scope.$route = $route;
+app.controller('AboutController', function($scope) {
 	$scope.message = 'Hello from AboutController';
 
 });

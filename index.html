@@ -6,10 +6,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
   </head>
   <body>
-    <ul class="w3-navbar w3-border w3-dark-grey w3-center">
-		<li><a href="#/" ng-class="w3-lime: $route.current.activeButton == 'home'">Home</a></li>
-		<li><a href="#/blog" ng-class="w3-lime: $route.current.activeButton == 'blog'">Blog</a></li>
-		<li><a href="#/about" ng-class="w3-lime: $route.current.activeButton == 'about'">About</a></li>
+    <ul class="w3-navbar w3-dark-grey">
+		<li><a href="#/" ng-class={{active}}>Home</a></li>
+		<li><a href="#/blog" ng-class={{active}}>Blog</a></li>
+		<li><a href="#/about" ng-class={{active}}>About</a></li>
 	</ul>
 	
 	<div ng-view></div>
