@@ -1,7 +1,3 @@
-app.controller('mainCtrl', function($scope) {
-	$scope.pageName = 'Page Name';
-});
-
 app.controller('HomeController', function($scope) {
 	$scope.message = 'Hello from HomeController';
 });
