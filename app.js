@@ -23,15 +23,18 @@ app.config(function($routeProvider) {
 
 app.controller('HomeController', function($scope) {
 	$scope.message = 'Hello from HomeController';
+	$scope.pageName = 'Home';
 	
 });
 
 app.controller('BlogController', function($scope) {
 	$scope.message = 'Hello from BlogController';
+	$scope.pageName = 'Blog';
 
 });
 
 app.controller('AboutController', function($scope) {
 	$scope.message = 'Hello from AboutController';
+	$scope.pageName = 'About';
 
 });
