@@ -6,14 +6,26 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
   </head>
   <body>
-    <ul class="w3-navbar w3-dark-grey">
-		<li><a href="#/" ng-class={{active}}>Home</a></li>
-		<li><a href="#/blog" ng-class={{active}}>Blog</a></li>
-		<li><a href="#/about" ng-class={{active}}>About</a></li>
-	</ul>
-	
-	<div ng-view></div>
-	
+    <nav class="w3-sidenav w3-collapse w3-dark-grey w3-animate-left" style="width:200px;">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large w3-hide-large">Close &times;</a>
+      <a href="#/">Home</a>
+      <a href="#/blog">Blog</a>
+      <a href="#/about">About</a>
+    </nav> 
+    
+    <div class="w3-main" style="margin-left:200px">
+      <header class="w3-container w3-lime">
+        <span class="w3-opennav w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</span>
+        <h2>I am Ruvin</h2>
+      </header>
+      
+      <div class="w3-container" ng-view></div>
+      
+      <footer class="w3-container w3-lime">
+        <p>Built with angulajs and w3css.</p>
+      </footer>
+    </div>
+      
     <script src="app.js"></script>
   </body>
 </html>
